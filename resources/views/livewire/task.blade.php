@@ -2,10 +2,10 @@
     <form class="p-4" wire:submit.prevent="save">
         <div class="mb-4" >
             <input wire:model.live="tarea" class="p-2 bg-gray-200 w-full" type="text" placeholder="Tarea...">
+            @error("tarea")<div class="mt-1 text-red-600 text-sm">{{$message}}</div>@enderror
         </div>
         <button type="submit" class="bg-indigo-700 text-white font-bold w-full rounded shadow p-2">Guardar</button>
     </form>
-
     <table class="shadow-md">
         <thead>
             <tr class="bg-gray-200 text-gray-600 uppercase text-sm">
